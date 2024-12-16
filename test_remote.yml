@@ -1,0 +1,9 @@
+---
+- name: Test connection to remote boxes.
+  hosts: "{{ _hosts | default('all') }}"
+  gather_facts: false
+  become: false
+
+  tasks:
+    - name: Ensure server is up
+      ansible.builtin.ping:
