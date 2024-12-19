@@ -4,6 +4,8 @@
   gather_facts: false
   become: false
 
+
   tasks:
+  # Fix tissue 01
     - name: Ensure server is up
       ansible.builtin.ping:
